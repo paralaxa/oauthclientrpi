@@ -1,0 +1,18 @@
+server:
+  port: 8081
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          admin:
+            client-id: admin
+            client-secret: password23
+            client-authentication-method: "client_secret_basic"
+            authorization-grant-type: "client_credentials"
+            scope: "kafka"
+            provider: localhost
+            client-name: admin
+        provider:
+          localhost:
+            token-uri: http://localhost:9000/oauth2/token
