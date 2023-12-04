@@ -32,7 +32,6 @@ public class SecurityConfig {
 
     OAuth2AuthorizedClientProvider authorizedClientProvider =
         OAuth2AuthorizedClientProviderBuilder.builder()
-            .refreshToken()
             .clientCredentials()
             .build();
 
